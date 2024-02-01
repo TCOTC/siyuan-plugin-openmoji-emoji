@@ -1,30 +1,15 @@
 {
-  "name": "plugin-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/plugin-sample",
-  "version": "0.3.3",
-  "minAppVersion": "2.12.1",
-  "backends": [
-    "windows",
-    "linux",
-    "darwin",
-    "ios",
-    "android"
-  ],
-  "frontends": [
-    "desktop",
-    "mobile",
-    "browser-desktop",
-    "browser-mobile",
-    "desktop-window"
-  ],
+  "name": "siyuan-plugin-openmoji-emoji",
+  "author": "TCOTC",
+  "url": "https://github.com/TCOTC/siyuan-plugin-openmoji-emoji",
+  "version": "0.0.1",
   "displayName": {
-    "default": "Plugin Sample",
-    "zh_CN": "插件示例"
+    "default": "Emoji: OpenMoji",
+    "zh_CN": "表情包: OpenMoji"
   },
   "description": {
-    "default": "This is a plugin sample",
-    "zh_CN": "这是一个插件示例"
+    "default": "Open source emojis for designers, developers and everyone else!",
+    "zh_CN": "为设计师、开发人员和其他人提供的开源表情符号！"
   },
   "readme": {
     "default": "README.md",
@@ -33,13 +18,17 @@
   "funding": {
     "openCollective": "",
     "patreon": "",
-    "github": "",
+    "github": "TCOTC",
     "custom": [
-      "https://ld246.com/sponsor"
+      "https://afdian.net/a/JeffreyChen"
     ]
   },
   "keywords": [
-    "sample",
-    "示例"
+    "Emoji",
+    "emoji",
+    "表情",
+    "符号",
+    "图标",
+    "icon"
   ]
 }

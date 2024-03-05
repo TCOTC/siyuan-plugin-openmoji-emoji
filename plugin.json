@@ -2,7 +2,7 @@
   "name": "siyuan-plugin-openmoji-emoji",
   "author": "TCOTC",
   "url": "https://github.com/TCOTC/siyuan-plugin-openmoji-emoji",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": {
     "default": "Emoji: OpenMoji",
     "zh_CN": "表情包: OpenMoji"
@@ -24,6 +24,8 @@
     ]
   },
   "keywords": [
+    "siyuan-plugin-openmoji-emoji",
+    "openmoji-emoji",
     "Emoji",
     "emoji",
     "表情包",

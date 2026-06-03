@@ -19,20 +19,25 @@ export default class OpenMojiPlugin extends Plugin {
         const emoji = `"OpenMoji", "Emojis Additional", "Emojis Reset", `;
         const fallbackHead = "BlinkMacSystemFont, Helvetica, ";
         const fallbackMid = '"Luxi Sans", "DejaVu Sans", arial, ';
-        const fallbackEnd = "sans-serif, emojis";
+        const fallbackEnd = `${emoji}sans-serif, emojis`;
         const lang = window.siyuan.config.appearance.lang; // 不能用 document.documentElement.lang，因为插件启动时这个属性可能还不存在
-        let fallback: string;
+        let family: string;
         switch (lang) {
             case "zh_CN":
-                fallback = `${fallbackHead}"PingFang SC", ${fallbackMid}"Microsoft Yahei", "Hiragino Sans GB", "Source Han Sans SC", ${fallbackEnd}`;
+                family = `${fallbackHead}"PingFang SC", ${fallbackMid}"Microsoft Yahei", "Hiragino Sans GB", "Source Han Sans SC", ${fallbackEnd}`;
+                break;
+            case "zh_CHT":
+                family = `${fallbackHead}"PingFang TC", ${fallbackMid}"Microsoft Jhenghei", "Hiragino Sans TC", "Source Han Sans TC", ${fallbackEnd}`;
+                break;
+            case "ja_JP":
+                family = `${fallbackHead}${fallbackMid}"Yu Gothic UI", arial, ${fallbackEnd}`;
                 break;
             default:
-                fallback = `${fallbackHead}${fallbackMid}${fallbackEnd}`;
+                family = `${fallbackHead}${fallbackMid}${fallbackEnd}`;
                 break;
         }
-        const uiStack = `"Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, ${emoji}${fallback}`;
         const rules = [
-            `:root:lang(${lang}) { --b3-font-family: ${uiStack} !important; --b3-font-family-protyle: ${uiStack} !important; }`,
+            `:root:lang(${lang}) { --b3-font-family: ${family} !important; }`,
             `:root { --b3-font-family-emoji: ${emoji}emojis !important; }`,
         ];
 

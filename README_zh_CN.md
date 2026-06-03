@@ -1,11 +1,9 @@
-[English](https://github.com/TCOTC/siyuan-plugin-openmoji-emoji/blob/main/README.md)
+> 近期更新：OpenMoji 从 v15.1 升级到 v17.0
 
 # OpenMoji
 
-所有表情符号均由开源表情符号和图标项目 [OpenMoji](https://openmoji.org/) 设计。许可证：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/#)
+OpenMoji 字体文件来自：[hfg-gmuend/openmoji](https://github.com/hfg-gmuend/openmoji)
 
-# 鸣谢
+### 注意
 
-仓库 [hfg-gmuend/openmoji](https://github.com/hfg-gmuend/openmoji)
-
-仓库 [zuoez02/siyuan-plugin-twitter-emoji](https://github.com/zuoez02/siyuan-plugin-twitter-emoji)
+本插件可能与集市中的其他字体或 Emoji 插件不兼容，使用本插件时请禁用其他字体或 Emoji 插件。

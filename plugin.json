@@ -1,38 +1,24 @@
 {
   "name": "siyuan-plugin-openmoji-emoji",
-  "author": "TCOTC",
+  "author": "Jeffrey Chen",
   "url": "https://github.com/TCOTC/siyuan-plugin-openmoji-emoji",
-  "version": "0.1.2",
+  "version": "1.0.0",
+  "minAppVersion": "3.2.0",
+  "backends": ["all"],
+  "frontends": ["all"],
+  "disabledInPublish": false,
   "displayName": {
-    "default": "Emoji: OpenMoji",
-    "zh_CN": "表情包: OpenMoji"
+    "default": "OpenMoji emoji",
+    "zh_CN": "OpenMoji 表情符号"
   },
   "description": {
-    "default": "Open source emojis for designers, developers and everyone else!",
-    "zh_CN": "为设计师、开发人员和其他人提供的开源表情符号！"
+    "default": "Use OpenMoji in SiYuan",
+    "zh_CN": "在思源笔记中使用 OpenMoji"
   },
   "readme": {
     "default": "README.md",
     "zh_CN": "README_zh_CN.md"
   },
-  "funding": {
-    "openCollective": "",
-    "patreon": "",
-    "github": "",
-    "custom": [
-      "https://afdian.com/a/JeffreyChen"
-    ]
-  },
-  "keywords": [
-    "siyuan-plugin-openmoji-emoji",
-    "openmoji-emoji",
-    "Emoji",
-    "emoji",
-    "表情包",
-    "表情",
-    "符号",
-    "图标",
-    "icon",
-    "TCOTC"
-  ]
+  "funding": {"custom": ["https://mytemos.com/"]},
+  "keywords": ["emoji","表情包","图标","icon"]
 }

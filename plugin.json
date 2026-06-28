@@ -2,7 +2,7 @@
   "name": "siyuan-plugin-openmoji-emoji",
   "author": "Jeffrey Chen",
   "url": "https://github.com/TCOTC/siyuan-plugin-openmoji-emoji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "3.7.0-beta.1",
   "backends": ["all"],
   "frontends": ["all"],

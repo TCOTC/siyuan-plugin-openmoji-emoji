@@ -16,20 +16,20 @@ export default class OpenMojiPlugin extends Plugin {
     }
 
     private applyFontOverrides() {
-        const emoji = `"OpenMoji", "Emojis Additional", "Emojis Reset", `;
+        const emoji = '"OpenMoji", "Emojis Additional", "Emojis Reset", ';
         const fallbackHead = "BlinkMacSystemFont, Helvetica, ";
         const fallbackMid = '"Luxi Sans", "DejaVu Sans", arial, ';
         const fallbackEnd = `${emoji}sans-serif, emojis`;
         const lang = window.siyuan.config.appearance.lang; // 不能用 document.documentElement.lang，因为插件启动时这个属性可能还不存在
         let family: string;
         switch (lang) {
-            case "zh_CN":
+            case "zh-CN":
                 family = `${fallbackHead}"PingFang SC", ${fallbackMid}"Microsoft Yahei", "Hiragino Sans GB", "Source Han Sans SC", ${fallbackEnd}`;
                 break;
-            case "zh_CHT":
+            case "zh-TW":
                 family = `${fallbackHead}"PingFang TC", ${fallbackMid}"Microsoft Jhenghei", "Hiragino Sans TC", "Source Han Sans TC", ${fallbackEnd}`;
                 break;
-            case "ja_JP":
+            case "ja":
                 family = `${fallbackHead}${fallbackMid}"Yu Gothic UI", arial, ${fallbackEnd}`;
                 break;
             default:

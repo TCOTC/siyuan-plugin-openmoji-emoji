@@ -1,6 +1,12 @@
 import "./index.scss";
 import {Plugin} from "siyuan";
 
+// SiYuan 3.8.3 起字体栈由 --b3-font-family-emoji-reset 等变量拼成，只改写 emoji 前缀即可让
+// OpenMoji 优先渲染表情符号，同时保留「设置 - 外观」中的全局默认字体与编辑器字体
+// https://github.com/siyuan-note/siyuan/issues/16923
+// https://github.com/siyuan-note/siyuan/issues/19148
+const EMOJI_PREFIX = '"OpenMoji", "Emojis Additional", "Emojis Reset"';
+
 export default class OpenMojiPlugin extends Plugin {
     private readonly overrideStyle = document.createElement("style");
 
@@ -16,29 +22,9 @@ export default class OpenMojiPlugin extends Plugin {
     }
 
     private applyFontOverrides() {
-        const emoji = '"OpenMoji", "Emojis Additional", "Emojis Reset", ';
-        const fallbackHead = "BlinkMacSystemFont, Helvetica, ";
-        const fallbackMid = '"Luxi Sans", "DejaVu Sans", arial, ';
-        const fallbackEnd = `${emoji}sans-serif, emojis`;
-        const lang = window.siyuan.config.appearance.lang; // 不能用 document.documentElement.lang，因为插件启动时这个属性可能还不存在
-        let family: string;
-        switch (lang) {
-            case "zh-CN":
-                family = `${fallbackHead}"PingFang SC", ${fallbackMid}"Microsoft Yahei", "Hiragino Sans GB", "Source Han Sans SC", ${fallbackEnd}`;
-                break;
-            case "zh-TW":
-                family = `${fallbackHead}"PingFang TC", ${fallbackMid}"Microsoft Jhenghei", "Hiragino Sans TC", "Source Han Sans TC", ${fallbackEnd}`;
-                break;
-            case "ja":
-                family = `${fallbackHead}${fallbackMid}"Yu Gothic UI", arial, ${fallbackEnd}`;
-                break;
-            default:
-                family = `${fallbackHead}${fallbackMid}${fallbackEnd}`;
-                break;
-        }
         const rules = [
-            `:root:lang(${lang}) { --b3-font-family: ${family} !important; }`,
-            `:root { --b3-font-family-emoji: ${emoji}emojis !important; }`,
+            `:root { --b3-font-family-emoji-reset: ${EMOJI_PREFIX} !important; }`,
+            `:root { --b3-font-family-emoji: ${EMOJI_PREFIX}, emojis !important; }`,
         ];
 
         // id 以 snippetCSS 开头的 style 元素会被添加到导出 PDF 中

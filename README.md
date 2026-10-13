@@ -1,5 +1,3 @@
-> Recent update: support for the font configuration changes in SiYuan v3.8.2 and v3.8.3; OpenMoji upgraded from v15.1 to v17.0
-
 # OpenMoji
 
 OpenMoji font file sourced from: [hfg-gmuend/openmoji](https://github.com/hfg-gmuend/openmoji)

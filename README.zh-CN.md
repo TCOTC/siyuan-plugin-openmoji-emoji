@@ -1,5 +1,3 @@
-> 近期更新：适配 SiYuan v3.8.2、v3.8.3 的字体配置功能变更；OpenMoji 从 v15.1 升级到 v17.0
-
 # OpenMoji
 
 OpenMoji 字体文件来自：[hfg-gmuend/openmoji](https://github.com/hfg-gmuend/openmoji)

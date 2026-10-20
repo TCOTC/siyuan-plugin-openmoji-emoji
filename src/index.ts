@@ -6,6 +6,8 @@ import {Plugin} from "siyuan";
 // https://github.com/siyuan-note/siyuan/issues/16923
 // https://github.com/siyuan-note/siyuan/issues/19148
 const EMOJI_PREFIX = '"OpenMoji", "Emojis Additional", "Emojis Reset"';
+// "Emojis Icon" 由主题在 Windows 11 上声明，图标位依赖其字形墨迹对齐，覆盖 emoji 栈时需要保留
+const EMOJI_ICON_STACK = '"OpenMoji", "Emojis Additional", "Emojis Icon", emojis';
 
 export default class OpenMojiPlugin extends Plugin {
     private readonly overrideStyle = document.createElement("style");
@@ -24,7 +26,7 @@ export default class OpenMojiPlugin extends Plugin {
     private applyFontOverrides() {
         const rules = [
             `:root { --b3-font-family-emoji-reset: ${EMOJI_PREFIX} !important; }`,
-            `:root { --b3-font-family-emoji: ${EMOJI_PREFIX}, emojis !important; }`,
+            `:root { --b3-font-family-emoji: ${EMOJI_ICON_STACK} !important; }`,
         ];
 
         // id 以 snippetCSS 开头的 style 元素会被添加到导出 PDF 中
